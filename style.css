@@ -627,13 +627,13 @@ html{
     }
 
     .header-img-paragraph{
-        height: 304px;
+        height: 320px;
     }
 
     .header-paragraph{
         width: 273px;
         left: 15px;
-        top: 185px;
+        top: 201px;
         font-size: 16px;
         line-height: 22px;
     }
