@@ -1,0 +1,686 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before{
+    letter-spacing: -0.03em;
+}
+
+/* Переменные */
+:root{
+    --black-121212: #121212;
+    --header-text: var(--black-121212);
+}
+
+/* Общий контейнер */
+.container{
+    margin: 0 auto;
+    width: 1150px;
+    padding-left: 125px;
+    padding-right: 125px;
+}
+
+/* К тегу <span> */
+.span-nav{
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Навигационная панель */
+.header{
+    margin-top: 32.82px;
+    margin-bottom: 70px;
+
+    min-width: 1150px;
+}
+
+.logo-link{
+    display: inline-block;
+}
+
+.logo{
+    display: block;
+    width: 126.89px;
+    height: 21.42px;
+}
+
+.ul-links{
+    display: inline-block;
+
+    margin-left: 554px;
+
+    height: 25px;
+
+    line-height: 25px;
+    vertical-align: top;
+}
+
+.ul-links__li{
+    display: inline-block;
+    margin-right: 58px;
+}
+
+.ul-links__li:nth-child(4){
+    margin-right: 0;
+}
+
+.ul-links__link{
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--black-121212);
+    transition: .3s linear;
+}
+
+/* Нижнее подчёркивание у ссылок навигационной панели */
+.ul-links__link:hover{
+    opacity: 0.5;
+}
+
+.ul-links__link::after{
+    content: "";
+    display: none;
+
+    width: 100%;
+    height: 2px;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background-color: var(--black-121212);
+    opacity: 0.5;
+
+    z-index: 1;
+}
+
+.ul-links__link:hover::after{
+    display: block;
+    opacity: 0.3;
+}
+
+
+/* MAIN */
+
+/* Basic information */
+.basic-information{
+    margin-bottom: 150px;
+}
+
+.header-main{
+    margin-bottom: 30px;
+
+    width: 100%;
+    
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+
+}
+
+.header-img-paragraph{
+    position: relative;
+    max-width: 100%;
+    height: 500px;
+    background-image: url('./resources/images/block2/image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-img{
+    display: block;
+    width: 1150px;
+    height: 500px;
+}
+
+.header-paragraph{
+    width: 430px;
+
+    position: absolute;
+    left: 40px;
+    top: 379px;
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+
+    color: #ffffff;
+}
+
+
+/* About Us */
+.about-us{
+    margin-bottom: 150px;
+}
+
+.about-us-header{
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.about-us-paragraph{
+    margin-bottom: 30px;
+
+    width: 1148px;
+
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 61px;
+
+    color: var(--black-121212);
+}
+
+.about-us-btn{
+    display: block;
+    
+    width: 255px;
+    height: 67px;
+
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 67px;
+
+    border: none;
+    border-radius: 5px;
+    
+    color: #ffffff;
+    background-color: #AD1818;
+
+    transition: .3s linear;
+}
+
+
+/* Projects */
+.projects{
+    margin-bottom: 150px;
+}
+
+.item{
+    margin-bottom: 90px;
+}
+
+.projects__header{
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: uppercase;
+    
+    color: var(--black-121212);
+}
+
+.item__img{
+    margin-bottom: 15px;
+}
+
+.item__header{
+    margin-bottom: 14px;
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 41px;
+}
+
+.item__link{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration: none;
+
+    color: #AD1818;
+
+    transition: .3s linear;
+}
+
+.item__link:active{
+    font-size: 19px;
+}
+
+
+.projects__link-btn{
+    width: 100%;
+    height: 153px;
+
+    display: block;
+
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 153px;
+    text-decoration: none;
+    text-align: center;
+
+    border: 1px solid #AD1818;
+    border-radius: 6px;
+    color: #AD1818;
+    
+    transition: .3s linear;
+}
+
+.projects__link-btn:hover{
+    border: 1px solid #AD1818;
+
+    color: #ffffff;
+    background-color: #AD1818;
+}
+
+.projects__link-btn:active{
+    font-size: 29px;
+}
+
+
+
+/* Services */
+.services{
+    margin: 0 auto;
+
+    max-width: 100%;
+    min-width: 1190px;
+
+    width: 100%;
+
+    background-color: var(--black-121212);
+}
+
+.black-container{
+    margin: 0 auto;
+
+    max-width: 1150px;
+    
+    padding: 150px 20px;
+}
+
+.services__header{
+    margin-bottom: 34px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+.services-items{
+    margin-bottom: 60px;
+}
+
+/* Задаём нижний отступ (от контейнера black-container) последнему блоку - services-block */
+.services-items:nth-last-child(1){
+    margin-bottom: 0;
+}
+
+.services-items__img{
+    max-width: 1150px;
+}
+
+.services-items__header{
+    margin-top: 13px;
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 41px;
+
+    color: #ffffff;
+}
+
+
+/* Two room apartment project */
+.two-room-apartment-project{
+    height: 717px;
+    margin-bottom: 185px;
+
+    position: relative;
+
+    background-image: url('./resources/images/two-room-apartment-project/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.adaptive-container{
+    margin: 0 auto;
+
+    width: 1150px;
+}
+
+.text-content{
+    max-width: 443px;
+    width: 443px;
+
+    position: absolute;
+    top: 80%;
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 41px;
+
+    color: #ffffff;
+}
+
+
+/* Contacts */
+.contacts{
+
+    width: 100%;
+}
+
+.contacts-container{
+    margin: 0 auto;
+
+    width: 1150px;
+}
+
+.contacts-img{
+    margin-bottom: 15px;
+
+    max-width: 24px;
+}
+
+.contacts-header{ /* ЭЛЕМЕНТ С ТЕКСТОМ - КОНТАКТЫ */
+    position: relative;
+    margin-bottom: 32px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: uppercase;
+
+    color: var(--black-121212);
+}
+
+.contacts-header::before{ /* ПСЕВДО-ЭЛЕМЕНТ */
+    content: "";
+    display: block;
+    position: absolute;
+    
+    left: -4px;
+    top: -36px;
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url('./resources/icon/icon-contacts.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+
+.contacts-telephone{
+    display: block;
+
+    width: 480px;
+    height: 60px;
+    margin-bottom: 32px;
+
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+
+    color: var(--black-121212);
+}
+
+.contacts-link{
+    display: block;
+
+    width: 412px;
+    height: 60px;
+
+    position: relative;
+
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    text-decoration: none;
+
+    color: var(--black-121212);
+    opacity: 0.5;
+
+    transition: .3s linear;
+}
+
+.contacts-link:hover{
+    opacity: 0.5;
+}
+
+.contacts-link::after{
+    margin-top: 6px;
+
+    width: 100%;
+    height: 0.1px;
+
+    content: "";
+    display: none;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    border: 1px solid var(--black-121212);
+
+    background-color: var(--black-121212);
+    opacity: 0.5; 
+}
+
+.contacts-link:hover::after{
+    display: block;
+    opacity: 0.5;
+}
+
+/* Footer */
+.footer{
+    max-width: 100%;
+    /* min-width: 1190px; */
+    
+    width: 100%;
+    background-color: var(--black-121212);
+}
+
+.footer-nav{
+    margin: 0 auto;
+    width: 460px;
+    padding-top: 60px;
+    margin-bottom: 87px;
+}
+
+.footer-li{
+    display: inline-block;
+    margin-right: 53px;
+    
+    list-style-type: none;
+}
+
+.footer-li:nth-child(4){
+    margin-right: 0px;
+}
+
+.footer-link{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #ffffff;
+
+    transition: .3s linear;
+}
+
+.footer-link:hover{
+    opacity: 0.5;
+}
+
+.footer-header{
+    padding-bottom: 30px;
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+
+    color: #ffffff;
+    opacity: 0.5;
+    box-sizing: border-box;
+}
+
+
+
+
+/* Настраиваем адаптивность сайта */
+@media (max-width: 1119px){
+    .container{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .body-class{
+        max-width: 100%;
+    }
+
+    /* Basic Information */
+    .basic-information{
+        margin-bottom: 120px;
+    }
+
+    .header-main{
+        max-width: 100%;
+        font-size: 50px;
+    }
+
+    .header-img-paragraph{
+        width: 100%;
+        height: 400px;
+
+        /* background-image: url('./resources/images/block2/image1__tablet.png'); */
+        
+    }
+    
+    .header-paragraph{
+        left: 40px;
+        top: 289px;
+    }
+
+
+
+    /* About Us */
+    .about-us{
+        margin-bottom: 120px;
+    }
+
+    .about-us-paragraph{
+        width: 690px;
+        font-size: 35px;
+        line-height: 48px;
+    }
+
+
+
+    /* Projects */
+    
+}
+
+
+
+@media (max-width: 300px){
+    .container{
+        margin: 0 auto;
+        width: 920px;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+
+    /* Basic Information */
+    .basic-information{
+        margin-bottom: 80px;
+    }
+
+    .header-main{
+        width: 337px;
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .header-paragraph{
+        width: 312px;
+        left: 15px;
+        top: 201px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+    /* About Us */
+    .about-us{
+        margin-bottom: 80px;
+    }
+
+    .about-us-header{
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .span-nav{
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .about-us-paragraph{
+        width: 345px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .about-us-btn{
+        width: 194px;
+        height: 51px;
+        font-size: 16px;
+        line-height: 51px;
+    }
+
+
+    /* Projects */
+    .projects{
+        margin-bottom: 144px;
+    }
+
+    .projects__header{
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .item__header{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .item__link{
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .projects__link-btn{
+        width: 100%;
+        height: 100px;
+        font-size: 22px;
+        line-height: 100px;
+    }
+}
