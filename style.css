@@ -2,6 +2,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    font-family: 'Manrope', sans-serif;
+}
+
 *,
 *::after,
 *::before{
@@ -284,27 +288,18 @@ html{
 
 /* Services */
 .services{
-    margin: 0 auto;
-
-    max-width: 100%;
-    min-width: 1190px;
-
-    width: 100%;
-
+    margin-bottom: 165px;
     background-color: var(--black-121212);
 }
 
-.black-container{
-    margin: 0 auto;
-
-    max-width: 1150px;
-    
-    padding: 150px 20px;
+.padding-top-bottom{
+    width: 100%;
+    padding: 150px 0;
 }
 
 .services__header{
+    padding-top: 150px;
     margin-bottom: 34px;
-
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
@@ -313,20 +308,32 @@ html{
     color: #ffffff;
 }
 
-.services-items{
-    margin-bottom: 60px;
+.box-wrapper{
+    margin-bottom: 106px;
+    width: 1150px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 85px;
+}
+
+.box-item{
+    width: calc(50% - 5px);
+    position: relative;
 }
 
 /* Задаём нижний отступ (от контейнера black-container) последнему блоку - services-block */
-.services-items:nth-last-child(1){
+.box-item:nth-last-child(1){
     margin-bottom: 0;
 }
 
-.services-items__img{
-    max-width: 1150px;
+.box-item__img{
+    display: block;
+    /* width: 570px; */
 }
 
-.services-items__header{
+.box-item__header{
     margin-top: 13px;
 
     font-size: 30px;
@@ -334,6 +341,100 @@ html{
     line-height: 41px;
 
     color: #ffffff;
+}
+
+.box-item__price{
+    padding: 5px 20px;
+
+    position: absolute;
+    left: 30px;
+    top: 32px;
+
+    background-color: #AD1818;
+    border-radius: 5px;
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+
+    color: #ffffff;
+}
+
+.services__btn{
+    margin-bottom: 150px;
+    width: 100%;
+    height: 153px;
+    font-weight: 400;
+    font-size: 30px;
+
+    border-radius: 5px;
+    
+    color: #ffffff;
+    border: none;
+    background-color: #AD1818;
+    transition: .3s linear;
+}
+
+.services__header__btn:active{
+    transform: scale(0.975);
+}
+
+
+
+/* Reviews */
+
+.reviews{
+    margin-bottom: 157px;
+}
+
+.reviews__header{
+    margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+
+    color: #121212;
+}
+
+.row{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 50px;
+}
+
+.col{
+    width: calc(50% - 106px);
+}
+
+.box{
+    /* width: 528px; */
+   
+}
+
+/* Модивикатор */
+.box_big{
+    width: calc(50% + 594px);
+}
+/* Модивикатор */
+
+.box__header{
+    margin-bottom: 30px;
+    width: calc(100% - 0px);
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 61px;
+}
+
+.box__content{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    
+    color: #121212;
 }
 
 
@@ -602,6 +703,90 @@ html{
         font-size: 25px;
         line-height: 34px;
     }
+
+    /* Services */
+    .services{
+        margin-bottom: 117px;
+    }
+
+    .padding-top-bottom{
+        width: 100%;
+    }
+
+    .services__header{
+        margin-bottom: 30px;
+    }
+
+    .box-wrapper{
+        width: 100%;
+        row-gap: 80px;
+        column-gap: 10px;
+    }
+
+    .box-item{
+        width: calc(50% - 5px);
+    }
+
+    .box-item__header{
+        font-size: 25px;
+        line-height: 34px;
+    }
+
+    .box-item__price{
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .box-item__img{
+        margin-bottom: 25px;
+        display: block;
+        width: 100%;
+    }
+
+    .services__btn{
+        margin-bottom: 120px;
+    }
+
+
+    /* Reviews */
+    .reviews{
+        margin-bottom: 120px;
+    }
+
+    .reviews__header{
+        margin-bottom: 25px;
+    }
+    .row{
+        row-gap: 80px;
+        column-gap: 10px;
+    }
+
+    .col{
+        width: calc(50% - 46px);
+    }
+
+    .box{
+        /* display: inline-block; */
+        /* width: 406px; */
+    }
+
+    .box_big{
+        width: calc(50% + 0px);
+    }
+
+    .box__header{
+        margin-bottom: 14px;
+    }
+
+    .box__content{
+        letter-spacing: -0.03em;
+    }
+
+
+    .box_big{
+        width: calc(50% + 536px);
+    }
+
 }
 
 
@@ -700,5 +885,92 @@ html{
         height: 100px;
         font-size: 22px;
         line-height: 100px;
+    }
+
+    
+    /* Services */
+    .services{
+        min-width: 350px;
+    }
+
+    .black-container{
+        width: 350px;
+        padding: 80px 0;
+        
+    }
+
+    .services__header{
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .box-wrapper{
+        width: 100%;
+        row-gap: 60px;
+    }
+
+    .box-item{
+        width: 100%;
+    }
+
+    .box-item__header{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .box-item__price{
+        left: 22px;
+        top: 24px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .services__btn{
+        height: 100px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    
+    /* Reviews */
+    .reviews{
+        margin-bottom: 80px;
+    }
+
+    .reviews__header{
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .row{
+        flex-direction: column;
+        row-gap: 80px;
+        column-gap: 0px;
+    }
+
+    .col{
+        width: 100%;
+    }
+
+    .box{
+        /* display: inline-block; */
+        /* width: 406px; */
+    }
+
+    .box_big{
+        width: 100%;
+    }
+
+    .box__header{
+        margin-bottom: 14px;
+        font-size: 25px;
+        line-height: 34px;
+    }
+
+    .box__content{
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.03em;
     }
 }
